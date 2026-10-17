@@ -47,4 +47,5 @@ canvas.addEventListener('pointerdown',e=>{let r=canvas.getBoundingClientRect(),x
 function loop(t){if(t-lastTime>120){state.frame++;if(state.auto){let m=monsters.filter(m=>m.alive).sort((a,b)=>Math.abs(a.x-player.x)+Math.abs(a.y-player.y)-(Math.abs(b.x-player.x)+Math.abs(b.y-player.y)))[0];if(m){state.target=m.id;let d=Math.abs(m.x-player.x)+Math.abs(m.y-player.y);if(d<=2)attack(false);else{let dx=Math.sign(m.x-player.x),dy=Math.sign(m.y-player.y);if(Math.abs(m.x-player.x)>Math.abs(m.y-player.y))dy=0;else dx=0;move(dx,dy)}}}if(Math.random()<.03&&monsters.filter(m=>m.alive).length<8)spawnMonster();draw();lastTime=t}frameCount++;if(t-fpsStart>1000){$('fps').textContent=frameCount;frameCount=0;fpsStart=t}requestAnimationFrame(loop)}
 load();initMap();for(let i=0;i<8;i++)spawnMonster();refresh();draw();log('ยินดีต้อนรับสู่ Mythvale Online!');log('ภารกิจแรก: กำจัดมอนสเตอร์และเก็บไอเทม');requestAnimationFrame(loop);
 })();
-</script></body></html>
+</script><script src="./sprites.js"></script>
+</body></html>
