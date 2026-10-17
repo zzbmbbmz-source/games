@@ -79,13 +79,13 @@
     if(state&&state.target===m.id){c.strokeStyle='#ffdf81';c.lineWidth=2;c.strokeRect(x+1,y+3,30,28);}
   }
   function drawTile(x,y,t,frame){
-    const px=x*TILE,py=y*TILE;
+    const tileX=x*TILE,tileY=y*TILE;
     const base=t==='path'?'#9a805b':t==='water'?'#286d91':t==='tree'?'#244f3b':t==='flower'?'#427c45':'#376b48';
-    rect(px,py,TILE,TILE,base);rect(px+1,py+1,30,30,'#ffffff05');
-    if(t==='path'){rect(px+5,py+8,5,3,'#b79b70');rect(px+20,py+23,6,3,'#b79b70');rect(px+14,py+4,2,2,'#70563d');}
-    if(t==='water'){rect(px+((frame%8)*2),py+8,10,2,'#70c8d8');rect(px+((frame%6)*3),py+22,7,2,'#4b9bb4');}
-    if(t==='tree'){rect(px+4,py+9,24,18,'#173c2e');rect(px+8,py+3,17,21,'#2f7044');rect(px+11,py+5,12,13,'#4c8a51');rect(px+14,py+20,6,11,'#79563c');px(px+10,py+9,'#68a85b');}
-    if(t==='flower'){rect(px+9,py+11,4,4,'#f5d58a');rect(px+7,py+9,3,3,'#e8a4d1');rect(px+12,py+9,3,3,'#e8a4d1');}
+    rect(tileX,tileY,TILE,TILE,base);rect(tileX+1,tileY+1,30,30,'#ffffff05');
+    if(t==='path'){rect(tileX+5,tileY+8,5,3,'#b79b70');rect(tileX+20,tileY+23,6,3,'#b79b70');rect(tileX+14,tileY+4,2,2,'#70563d');}
+    if(t==='water'){rect(tileX+((frame%8)*2),tileY+8,10,2,'#70c8d8');rect(tileX+((frame%6)*3),tileY+22,7,2,'#4b9bb4');}
+    if(t==='tree'){rect(tileX+4,tileY+9,24,18,'#173c2e');rect(tileX+8,tileY+3,17,21,'#2f7044');rect(tileX+11,tileY+5,12,13,'#4c8a51');rect(tileX+14,tileY+20,6,11,'#79563c');px(tileX+10,tileY+9,'#68a85b');}
+    if(t==='flower'){rect(tileX+9,tileY+11,4,4,'#f5d58a');rect(tileX+7,tileY+9,3,3,'#e8a4d1');rect(tileX+12,tileY+9,3,3,'#e8a4d1');}
   }
   function render(){
     if(typeof map==='undefined'||typeof player==='undefined'||typeof monsters==='undefined')return;
