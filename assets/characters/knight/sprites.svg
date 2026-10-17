@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="32" viewBox="0 0 192 32"><title>Six-frame pixel knight character sprite strip</title><g transform="translate(0,0)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="10" y="21" width="4" height="6" fill="#35445d"/><rect x="18" y="21" width="4" height="6" fill="#35445d"/>
+  <rect x="9" y="26" width="6" height="3" fill="#4c3429"/><rect x="17" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="13" width="2" height="12" fill="#dce9f7"/><rect x="22" y="14" width="6" height="2" fill="#e0b74c"/>
+  
+  </g><g transform="translate(32,-1)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="10" y="21" width="4" height="8" fill="#35445d"/><rect x="20" y="21" width="4" height="6" fill="#35445d"/>
+  <rect x="9" y="26" width="6" height="3" fill="#4c3429"/><rect x="19" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="13" width="2" height="12" fill="#dce9f7"/><rect x="22" y="14" width="6" height="2" fill="#e0b74c"/>
+  
+  </g><g transform="translate(64,0)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="10" y="21" width="4" height="6" fill="#35445d"/><rect x="18" y="21" width="4" height="6" fill="#35445d"/>
+  <rect x="9" y="26" width="6" height="3" fill="#4c3429"/><rect x="17" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="13" width="2" height="12" fill="#dce9f7"/><rect x="22" y="14" width="6" height="2" fill="#e0b74c"/>
+  
+  </g><g transform="translate(96,1)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="12" y="21" width="4" height="6" fill="#35445d"/><rect x="18" y="21" width="4" height="8" fill="#35445d"/>
+  <rect x="11" y="26" width="6" height="3" fill="#4c3429"/><rect x="17" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="8" width="2" height="15" fill="#dce9f7"/><rect x="21" y="9" width="6" height="2" fill="#e0b74c"/>
+  <path d="M23 7 Q31 11 27 20" fill="none" stroke="#e0b74c" stroke-width="2"/>
+  </g><g transform="translate(128,0)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="10" y="21" width="4" height="6" fill="#35445d"/><rect x="18" y="21" width="4" height="6" fill="#35445d"/>
+  <rect x="9" y="26" width="6" height="3" fill="#4c3429"/><rect x="17" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="8" width="2" height="15" fill="#dce9f7"/><rect x="21" y="9" width="6" height="2" fill="#e0b74c"/>
+  <path d="M23 7 Q31 11 27 20" fill="none" stroke="#e0b74c" stroke-width="2"/>
+  </g><g transform="translate(160,-1)" shape-rendering="crispEdges">
+  <ellipse cx="16" cy="28" rx="8" ry="2" fill="#14271c" opacity=".65"/>
+  <rect x="10" y="21" width="4" height="8" fill="#35445d"/><rect x="20" y="21" width="4" height="6" fill="#35445d"/>
+  <rect x="9" y="26" width="6" height="3" fill="#4c3429"/><rect x="19" y="26" width="6" height="3" fill="#4c3429"/>
+  <rect x="10" y="12" width="12" height="11" fill="#42658e"/><rect x="11" y="13" width="10" height="4" fill="#d7e4f3"/><rect x="14" y="15" width="3" height="7" fill="#e0b74c"/>
+  <rect x="11" y="4" width="11" height="10" fill="#e8b88e"/><rect x="10" y="2" width="13" height="5" fill="#46342b"/><rect x="10" y="4" width="3" height="5" fill="#46342b"/><rect x="19" y="6" width="2" height="2" fill="#252638"/>
+  <rect x="7" y="13" width="4" height="9" fill="#42658e"/><rect x="21" y="13" width="4" height="8" fill="#42658e"/>
+  <rect x="24" y="8" width="2" height="15" fill="#dce9f7"/><rect x="21" y="9" width="6" height="2" fill="#e0b74c"/>
+  <path d="M23 7 Q31 11 27 20" fill="none" stroke="#e0b74c" stroke-width="2"/>
+  </g></svg>
