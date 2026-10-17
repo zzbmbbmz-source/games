@@ -7,6 +7,17 @@
   const c = canvas.getContext('2d');
   const TILE = 32;
   const clamp = (v,a,b)=>Math.max(a,Math.min(b,v));
+  const spriteSheets = {};
+  const spritePaths = {
+    knight:'./assets/characters/knight/sprites.svg', archer:'./assets/characters/archer/sprites.svg',
+    mage:'./assets/characters/mage/sprites.svg', priest:'./assets/characters/priest/sprites.svg',
+    slime:'./assets/monsters/slime/sprites.svg', poring:'./assets/monsters/poring/sprites.svg',
+    mushroom:'./assets/monsters/mushroom/sprites.svg', wolf:'./assets/monsters/wolf/sprites.svg',
+    skeleton:'./assets/monsters/skeleton/sprites.svg', demon:'./assets/monsters/demon/sprites.svg',
+    golem:'./assets/monsters/golem/sprites.svg', dragon:'./assets/monsters/dragon/sprites.svg',
+    effects:'./assets/effects/slash-magic.svg'
+  };
+  if(typeof Image!=='undefined')Object.entries(spritePaths).forEach(([id,src])=>{const img=new Image();img.onload=()=>{spriteSheets[id]=img;};img.src=src;});
   const pal = {
     knight:['#d6e2f4','#627da7','#34445f','#f0c39b','#583b2b','#d8ad42'],
     archer:['#c9dca2','#65864a','#354c38','#edbd95','#65422d','#c6a86b'],
@@ -25,6 +36,8 @@
   function px(x,y,col){rect(x,y,3,3,col);}
   function outline(x,y,w,h,col){rect(x-1,y-1,w+2,2,col);rect(x-1,y+h-1,w+2,2,col);rect(x-1,y,2,h,col);rect(x+w-1,y,2,h,col);}
   function drawHero(x,y,frame,dir,attack,cls){
+    const sheet=spriteSheets[cls];
+    if(sheet&&sheet.complete&&sheet.naturalWidth){const f=attack>0?3+(frame%3):frame%3;c.drawImage(sheet,f*32,0,32,32,Math.round(x),Math.round(y),32,32);return;}
     const p=pal[cls]||pal.knight, bob=frame%4===1?-1:frame%4===3?1:0, step=frame%4;
     const ox=x+7, oy=y+3+bob, leg=step===1?2:step===3?-2:0;
     // ground shadow + cast shadow
@@ -53,6 +66,8 @@
   }
   function drawMob(m,x,y,frame){
     const type=m.kind||m.type||(/Poring/i.test(m.name)?'poring':/Mushroom/i.test(m.name)?'mushroom':/Wolf/i.test(m.name)?'wolf':/Skeleton/i.test(m.name)?'skeleton':/Demon/i.test(m.name)?'demon':/Dragon/i.test(m.name)?'dragon':/Golem/i.test(m.name)?'golem':'slime');
+    const sheet=spriteSheets[type];
+    if(sheet&&sheet.complete&&sheet.naturalWidth){const f=frame%Math.max(1,Math.floor(sheet.naturalWidth/32));c.drawImage(sheet,f*32,0,32,32,Math.round(x),Math.round(y),32,32);if(m.hp!==undefined&&m.maxHp){rect(x+2,y+1,28,4,'#18202b');rect(x+3,y+2,26*clamp(m.hp/m.maxHp,0,1),2,m.boss?'#ff526c':'#e65e69');}if(m.boss){c.strokeStyle='#ffd96a';c.strokeRect(x-2,y-3,36,34);}return;}
     const p=pal[type]||pal.slime, bob=frame%4===0?0:frame%4===1?-2:frame%4===2?-1:1, hit=m.hit>0;
     const cx=x+16, by=y+25+bob;
     rect(x+6,y+27,20,3,'#12231c88');
