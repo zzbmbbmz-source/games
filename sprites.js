@@ -87,19 +87,23 @@
     if(t==='tree'){rect(tileX+4,tileY+9,24,18,'#173c2e');rect(tileX+8,tileY+3,17,21,'#2f7044');rect(tileX+11,tileY+5,12,13,'#4c8a51');rect(tileX+14,tileY+20,6,11,'#79563c');px(tileX+10,tileY+9,'#68a85b');}
     if(t==='flower'){rect(tileX+9,tileY+11,4,4,'#f5d58a');rect(tileX+7,tileY+9,3,3,'#e8a4d1');rect(tileX+12,tileY+9,3,3,'#e8a4d1');}
   }
-  function render(){
-    if(typeof map==='undefined'||typeof player==='undefined'||typeof monsters==='undefined')return;
+  function render(game){
+    if(!game||!game.map||!game.player||!game.monsters)return;
+    const {map,player,monsters,state}=game;
     c.clearRect(0,0,canvas.width,canvas.height);
-    const frame=(typeof state!=='undefined'?state.frame:0)||0;
-    for(let y=0;y<ROWS;y++)for(let x=0;x<COLS;x++)drawTile(x,y,map[y][x],frame);
-    // Props: path-edge grass tufts and little stones add depth.
-    for(let y=0;y<ROWS;y++)for(let x=0;x<COLS;x++){
+    const frame=state.frame||0;
+    for(let y=0;y<game.ROWS;y++)for(let x=0;x<game.COLS;x++)drawTile(x,y,map[y][x],frame);
+    for(let y=0;y<game.ROWS;y++)for(let x=0;x<game.COLS;x++){
       if(map[y][x]==='grass'&&((x*7+y*11)%17===0)){px(x*TILE+6,y*TILE+17,'#74a45b');px(x*TILE+9,y*TILE+14,'#a3bd6a');}
     }
-    monsters.forEach(m=>{if(!m.alive)return;drawMob(m,m.x*TILE,m.y*TILE,frame);});
-    const cls=(typeof state!=='undefined'&&state.job)||'knight';
-    drawHero(player.x*TILE,player.y*TILE,frame,player.dir||1,(typeof state!=='undefined'&&state.attackFrame)||0,pal[cls]?cls:'knight');
-    if(typeof $==='function')$('coords').textContent='x: '+player.x+' · y: '+player.y;
+    // Draw world props and monsters in depth order, then hero.
+    monsters.filter(m=>m.alive).sort((a,b)=>a.y-b.y).forEach(m=>drawMob(m,m.x*TILE,m.y*TILE,frame));
+    const cls=pal[state.job]?state.job:'knight';
+    drawHero(player.x*TILE,player.y*TILE,frame,player.dir||1,state.attackFrame||0,cls);
+    const townX=2*TILE,townY=6*TILE;
+    rect(townX,townY,64,64,'#80583e');rect(townX+5,townY+5,54,54,'#cba777');rect(townX+11,townY+12,42,40,'#6e9a66');
+    c.fillStyle='#f6dba2';c.font='10px monospace';c.fillText('TOWN',townX+17,townY+39);
+    const coord=document.getElementById('coords');if(coord)coord.textContent='x: '+player.x+' · y: '+player.y;
   }
   // Provide reusable model catalog for future content expansion.
   window.MythvaleSprites={
